@@ -1,0 +1,581 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile Page</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <style>
+        html{
+            scroll-behavior: smooth;
+        }
+        body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    
+}
+
+.header-container {
+    background-color: #f4f4f4;
+}
+
+.profile-header {
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    border-bottom: 2px solid #ddd;
+    /* margin-top: 80px; */
+    position: fixed;
+    width: 100%;
+    background-color:rgb(235, 225, 216);
+    
+}
+
+.profile-photo {
+    width: 150px;
+    height: 150px; 
+    border-radius: 50%; 
+    margin-right: 20px;
+}
+
+.profile-info {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.name {
+    font-size: 50px;
+    margin: 0px;
+    text-align: center;
+}
+
+.designation {
+    font-size: 23px;
+    color: #666;
+}
+
+.navbar {
+    background-color: gray;
+    padding: 10px 0;
+    position: fixed;
+    top: 180px;
+    width: 100%;
+}
+
+.navbar ul {
+    list-style: none;
+    padding: 15px;
+    margin: 0;
+    display: flex;
+    justify-content: space-evenly; 
+}
+
+.navbar li {
+    margin: 0 15px;
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+    font-size: 28px;
+}
+
+.navbar a:hover {
+    text-decoration: underline;
+    background-color: lightgray;
+}
+.about{
+    width: 99.9%;
+    height: 972px;
+    /* background-color: red; */
+    border: black solid 2px;
+    
+}
+.education{
+    width: 99.9%;
+    height: 800px;
+    /* background-color: yellow; */
+    border: black solid 2px;
+}
+.skills{
+    width: 99.9%;
+    height: 800px;
+    /* background-color: green; */
+    border: black solid 2px;
+}
+.interests{
+    width: 99.9%;
+    height: 800px;
+    /* background-color: purple; */
+    border: black solid 2px;
+}
+.contact{
+    width: 99.9%;
+    height: 800px;
+    /* background-color: blue; */
+    border: black solid 2px;
+
+}
+footer {
+            text-align: center;
+            margin-top: 20px;
+            padding: 20px;
+            background-color:grey;
+        }
+.fill{
+    height: 262px;
+    width: 100%;
+    background-color: red;
+}
+.about img{
+    height: 700px;
+    width: 600px;
+    float: left;
+    padding-top: 0px;
+}
+.profile {
+    border: 1px solid #ccc;
+    padding: 20px;
+    max-width: 400px;
+    text-align: center;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    
+}
+
+.profile_name {
+    font-weight: bold;
+    font-size: 100px;
+    margin: 0;
+    margin-top: 80px;
+    margin-left: 720px;
+    margin-bottom: 20px;
+}
+
+.profile_designation {
+    font-style: italic;
+    color: #555;
+    margin: 5px 0;
+    font-size: 30px;
+    margin-left: 730px;
+    margin-bottom: 0px;
+}
+
+.profile_about {
+    color: #333;
+    font-size: 20px;
+    margin-left: 730px;
+    margin-right: 100px;
+}
+.social-media {
+    display: flex;
+    /* justify-content: center; */
+    margin-left: 730px;
+    gap: 50px; 
+    margin-top: 30px; 
+}
+
+.icon {
+    text-decoration: none;
+    color: #333; 
+    font-size: 50px;
+    transition: color 0.3s, transform 0.3s;
+}
+
+.icon:hover {
+    color: #007bff; 
+    transform: scale(1.2); 
+}
+
+/* education csssssssssssssss */
+/* .educationnnnnnn */
+.container {
+    width: 100%; 
+    padding: 20px;
+    box-sizing: border-box; 
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+}
+
+.education-card {
+    border: 1px solid #ddd;
+    padding: 15px;
+    margin-top: 20px;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+    
+}
+
+h2 {
+    color: #0056b3;
+}
+
+p {
+    line-height: 1.6;
+}
+
+ul {
+    list-style-type: disc;
+    padding-left: 20px;
+}
+
+.high-school-container {
+    display: flex; 
+    justify-content: space-between;
+}
+
+.half-width {
+    width: 48%;
+    margin-top: 20px; 
+}
+
+/* contact cssssssssss */
+.headercontact {
+    background:white;
+    padding: 20px 0;
+    text-align: center;
+}
+
+.header-title {
+    margin: 0;
+}
+
+.main-content {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.contact-title {
+    margin: 0 0 20px;
+   
+}
+
+.contact-description {
+    margin: 0 0 20px;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-label {
+    margin: 10px 0 5px;
+}
+
+.form-input, .form-textarea {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-bottom: 15px;
+}
+
+.form-input:focus, .form-textarea:focus {
+    border-color: #007BFF;
+}
+
+.form-button {
+    padding: 10px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.form-button:hover {
+    background-color: #0056b3;
+}
+
+/* certuficate cssssss */
+.achh2 {
+    margin-top: 30px;
+    font-size: 2em;
+    color: #333;
+}
+
+.achievements {
+    
+    margin: 60px;
+}
+
+.achlist {
+    list-style-type: none;
+    padding: 0;
+}
+
+.certificates {
+    margin: 60px;
+}
+
+.certificate-container {
+    display: flex;
+    justify-content: space-around;
+}
+
+.certificate {
+    text-align: center;
+    max-width: 30%;
+}
+
+.certificate img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.certificate p {
+    margin-top: 10px;
+    font-size: 0.9em;
+    color: #555;
+}
+
+/* skillllll csssssss */
+.containerskl {
+    width: 80%;
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-top: 100px;
+    margin-left: 100px;
+}
+
+.h1skl {
+    text-align: center;
+}
+
+.h2skl {
+    color: #0056b3;
+}
+
+.ulskl {
+    list-style-type: none;
+    padding: 0;
+}
+
+.language {
+    display: inline-block;
+    margin: 10px;
+    text-align: center;
+    transition: transform 0.3s;
+}
+
+.language:hover {
+    transform: scale(1.1);
+}
+
+.logoskl {
+    width: 60px;
+    height: auto;
+    transition: filter 0.3s;
+}
+
+.logoskl:hover {
+    filter: brightness(1.2);
+}
+    </style>
+</head>
+<body>
+    <div class="header-container">
+        <header class="profile-header">
+            <img src="https://previews.dropbox.com/p/thumb/ACfNYj9KRC80t_gcvb2zSc-LmfqjWqtS5Z0vsO4XPEirXfOUo2Hf3S8-uz2w3d32bpXrp38Sgejic0vEyhXcKISqB8hnE6Fkmf3xxkkqhsYy4Mv2j2TNJ0YxCg6tTe9u9LnpNcCn1jeIr3L79_sUVOd8KBBk7NI6UIw94gengAbZFJzx_23-skAX-Mo0ECtjbi_sIVNNObc3UC4CfTX_5QxKLP7Yw4qB6t6ov8JkNr6_3VGnlPb-0Wg03He9fEdPsHqHcaUuYIDbPzMJH9MkLsbSM2q9lME9lj3RFt_G0Y-E5mmfixvnYweHVMpmYgugJQDOrvkV8MUHEFas2Mwbea_a/p.jpeg" alt="Profile Photo" class="profile-photo">
+            <div class="profile-info">
+                <h1 class="name">Rohit Kumar</h1>
+                <p class="designation">Web Developer | Photographer</p>
+            </div>
+        </header>
+        
+        <nav class="navbar">
+            <ul>
+                <li><a href="#about" >Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#education">Education</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#interests">Achievement</a></li>
+                <li><a href="#contact">Contact</a></li>
+                
+            </ul>
+        </nav>
+    </div>
+    <section class="about" id="about">
+        <div class="fill"></div>
+        <img src="https://previews.dropbox.com/p/thumb/ACeeUs6Dr8yrpzcLzo-aVNWHYzl98SNdJTNgaoLldHx46wImWnAzP3tQn8JjFa-aUP5swtQm9RvylnTF-DeBGcsEaMpVvhmIf44QvM_dCtVt09c92Oncz5QRLxOhgJPKFG1Vdf6YfWGPavQ8D0l7Dje-4PLyv8_wwj8Pz8CK39mocqauG0B2Odge5C-XxBmWhB8wJ6ro9-Dqg-UqJOSXra7G-VJMUZ1fWBbPOWvj8f9t3BICJt5syXRvuVRyNFbnEeEgFygVQLKMwUQbNP-vFkxMCQ0o732utTF5ycUg6cD23xP53YtbYBByzI6Mij-uCx_xPNvDFsql0JoPjD7amtFP/p.png" alt="image">
+        <section class="proile">
+            <h2 class="profile_name">Rohit Kumar</h2>
+            <p class="profile_designation">Web Developer | Photographer</p>
+            <p class="profile_about">About me: I am a first-year B.Tech student specializing in Computer Science Engineering at LPU. I am passionate about technology and programming, eager to learn and explore new concepts in the field. In my free time, I enjoy working on personal projects and collaborating with peers to enhance my skills. I’m looking forward to gaining knowledge and experience that will help me in my future career. </p>
+        </section>
+        <section class="social-media">
+            <a href="https://www.facebook.com/share/ozi4SoNMdTBbx5y3/" target="_blank" class="icon"><i class="fab fa-facebook"></i></a>
+            <a href="https://www.instagram.com/darkman_9572/profilecard/?igsh=aDZsMjAzcHU4b2N0" target="_blank" class="icon"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.linkedin.com/in/rohit-kumar-0b612128b?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank" class="icon"><i class="fab fa-linkedin"></i></a>
+            <a href="https://github.com/Darkman-9572" target="_blank" class="icon"><i class="fab fa-github"></i></a>
+            <a href="mailto:rohitk54676@gmail.com" class="icon"><i class="fas fa-envelope"></i></a>
+        </section>
+         
+
+    </section>
+    <section class="education" id="education">
+        <div class="container">
+            <h1>Education Details</h1>
+            
+            <div class="education-card">
+                <h2>Bachelor of Technology (B.Tech)</h2>
+                <p><strong>University:</strong> Lovely Professional University</p>
+                <p><strong>Specialization:</strong> Computer Science and Engineering</p>
+                <p><strong>Year:</strong> 2024 - Present</p>
+                <p><strong>CGPA:</strong> XX (Current)</p>
+                <h3>Relevant Courses:</h3>
+                <ul>
+                    <li>Data Structures and Algorithms</li>
+                    <li>Digital Logic Design</li>
+                    <li>Computer Programming</li>
+                    <li>Mathematics for Engineers</li>
+                    <li>Electronics Engineering</li>
+                </ul>
+            </div>
+    
+            <div class="high-school-container">
+                <div class="education-card half-width">
+                    <h2>12th Grade</h2>
+                    <p><strong>School:</strong> DAV Public School</p>
+                    <p><strong>Year:</strong> 2023</p>
+                    <p><strong>Board:</strong> CBSE</p>
+                    <p><strong>Percentage:</strong> 86%</p>
+                    
+                </div>
+    
+                <div class="education-card half-width">
+                    <h2>10th Grade</h2>
+                    <p><strong>School:</strong> DAV Public School</p>
+                    <p><strong>Year:</strong> 2021</p>
+                    <p><strong>Board:</strong> CBSE </p>
+                    <p><strong>Percentage:</strong> 78%</p>
+                    
+                    
+                </div>
+            </div>
+        </div>
+
+    </section>
+    <section class="skills" id="skills">
+        <div class="containerskl">
+            <h1 class="h1skl">My Skills</h1>
+            
+            <h2 class="h2skl">Technical Skills</h2>
+            <ul class="ulskl">
+                <li>Programming Fundamentals</li>
+                <li>Data Structures and Algorithms</li>
+                <li>Web Development (HTML, CSS, JavaScript)</li>
+                <li>Database Management Systems</li>
+                <li>Basic Networking</li>
+            </ul>
+            
+            <h2 class="h2slk">Non-Technical Skills</h2>
+            <ul class="ulskl">
+                <li>Communication Skills</li>
+                <li>Team Collaboration</li>
+                <li>Problem-Solving</li>
+                <li>Time Management</li>
+                <li>Adaptability</li>
+            </ul>
+            
+            <h2 class="h2skl">Programming Languages</h2>
+            <div class="programming-languages">
+                <div class="language">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" alt="Java" class="logoskl">
+                    <span>Java</span>
+                </div>
+                <div class="language">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python" class="logoskl">
+                    <span>Python</span>
+                </div>
+                <div class="language">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JavaScript" class="logoskl">
+                    <span>JavaScript</span>
+                </div>
+                <div class="language">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/c/c-original.svg" alt="C" class="logoskl">
+                    <span>C</span>
+                </div>
+                <div class="language">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/csharp/csharp-original.svg" alt="C#" class="logoskl">
+                    <span>C#</span>
+                </div>
+            </div>
+        </div>
+
+    </section>
+    <section class="interests" id="interests">
+        <section class="achievements">
+            <h2 class=".achh2">Achievements</h2>
+            <ul class="achlist">
+                <li>Achievement 1: Score 95 %tile in JEE Mains</li>
+                <li>Achievement 2: Rank 264 in class 8th at national lavel Maths Olympiad. </li>
+                <li>Achievement 3: Winner of a Scholarship at district lavel </li>
+            </ul>
+        </section>
+    
+        <section class="certificates">
+            <h2>Certificates</h2>
+            <div class="certificate-container">
+                <div class="certificate">
+                    <img src="https://previews.dropbox.com/p/thumb/ACdjGdcewpK9twcUaQw8kyQsMlWxGdEvZWUdlj7rE8c445OPSJKG5U-bfaKurlCNqPu3-cQDkYPyT85SFhpaBlDoZPCChZLVVOXBGvkxyZhc-TZONI1va0i1brg3BAD4vnXZ8T7BLxPlUi7x8Fe3EPv9lRZG63lZgFbiay3TheN4TEyUWg6klxReYInLyFhDSePPgaJqnKkkzj82flgD0LYgBha86iPseOl9pP9wSslQBwm7SOpfIFYaGQsPBGaRRfBecRjD_jANFTNeDfxUkx1Aild09BDYYWnyfGzDkbrnKEsOI6qKyDNv1GHXDi0qXISkiC4VNg35SYTJSYFX-rAF/p.png" alt="Certificate 1">
+                    <p>Certificate of Qualification in Hack-a-throne 1.0</p>
+                </div>
+                <div class="certificate">
+                    <img src="https://previews.dropbox.com/p/thumb/ACcr2Znd56x_nmZsNi82kM-GoWTfziBEDPkEvKP3BAZRQWKbuo4atXR5U3yIx5SWD5S81YsD5sFpmOGbJNsw3HlCGa74cKg8oitn1R7zJ7kbu2lMod0IwzaWemJCI5IEwwvPyjwqeHOFIjxtFW-FwzasfYwUXVRV1gLZoqeXuv17ZU_kJPeD8i4ZmFtD3WKGSuDvJ4xQJfxU_aD1atbezf5K7LbMT6nOF0sF6d-8NOA0dbgMGM2Lsqi9HHHY2SlK9lBYmH6yE9c33Y5oakT9MVoFOQsVazvq-Hma7YRrXC3-buJoA9CTo7rnMQFHIlDnQd7MRO5YfCH7hVv5X4zIVg7H/p.jpeg" alt="Certificate 2">
+                    <p>Certificate of Participation in CODEQUEST</p>
+                </div>
+                <div class="certificate">
+                    <img src="https://previews.dropbox.com/p/thumb/ACc5SnLDJWMLST9wmiFHpNyzPBeulPIEnbPNJSeT_Mo88uyYKvBXJo0mjd1qxhkqRshkYnjtLtDj0XWU_srI63lnQGj2Id9fxzm5YNMe9sTQTY_gYLqHf7AOpKVZL4zWnwDMDaBMGVb_y6dQFaP-0ntpzCW3vYrrLurZF7avVt226-HJ81VFDSUgBFFoYBKLD1hLeIGmClkQA_pXkIBsTWFDFqvr9nrSwPr43baWKxrSL4FrONz7EPh5Rco20VsolCprHMRWK7K_AydJiM2dJFqimPgONh_AQS03vd5D_axm6IdFvS4wWcpTy6gxN3SoYmAuI0fXRRfJ5JCJBvlytwfj/p.jpeg" alt="Certificate 3">
+                    <p>Certificate of Effective Time Management</p>
+                </div>
+            </div>
+        </section>
+
+    </section>
+    <section class="contact" id="contact">
+        <header class="headercontact">
+            <h1 class="header-title">Contact Me</h1>
+        </header>
+        <main class="main-content">
+            <section class="contact-details">
+                <h2 class="contact-title">Get in Touch</h2>
+                <p class="contact-description">Please fill out the form below to send me a message:</p>
+                <form class="contact-form" action="" method="post">
+                    <label for="name" class="form-label">Name:</label>
+                    <input type="text" id="name" name="name" class="form-input" required>
+    
+                    <label for="email" class="form-label">Email:</label>
+                    <input type="email" id="email" name="email" class="form-input" required>
+    
+                    <label for="subject" class="form-label">Subject:</label>
+                    <input type="text" id="subject" name="subject" class="form-input" required>
+    
+                    <label for="message" class="form-label">Message:</label>
+                    <textarea id="message" name="message" class="form-textarea" rows="5" required></textarea>
+    
+                    <button type="submit" class="form-button">Send Message</button>
+                </form>
+            </section>
+        </main>
+
+    </section>
+    <footer>
+        &copy; 2024 Rohit Kumar. All rights reserved.
+    </footer>
+</body>
+</html>
